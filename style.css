@@ -1,0 +1,141 @@
+* {
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5); 
+    --surface-color:rgba(255, 255, 255, 0.05); 
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+     --stroke-color:rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(0, 0, 0, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+
+ body {
+   /* background-image: url(./assets/assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    
+   simplificarei esse código inteiro com uma tag "atalho" → */
+   background: var(--bg-url) no-repeat top center/cover;
+    
+ }
+ body * {
+     font-family: 'inter', Sans-Serif;
+     /*color: #ffffff; → a forma no sistema hexadecimal */ 
+     color: var(--text-color);
+ }
+
+ #house { 
+   border: 1px solid green;
+    margin: 56px auto 0px;
+    width: 360px;
+    padding: 0 24px;
+    
+ }
+/* #profile {
+     text-align: center;
+ }
+ essa é uma maneira de transformar um centralizar um display "in line". se a tag pai for alterada, a tag filha também será de certa forma.
+ */
+ #profile {
+     padding: 24px ;
+     border: 1px solid red ;
+ }
+ 
+
+ #profile img {
+    width: 120px;
+    margin: auto;
+    display: block;
+ }
+ 
+ #profile p {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     text-align: center;
+     margin-top: 8px;
+ }
+ /*links*/
+ 
+ ul{
+     list-style: none;
+     
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     padding: 24px 0;
+
+     
+ }
+ ul li a {
+     display: flex;
+     
+     justify-content: center;
+     align-items: center;
+     
+     padding: 16px 24px;
+     
+     background: var(--surface-color);
+     
+     border: 1px solid var(--stroke-color);
+     
+     border-radius: 8px;
+     
+    -webkit-backdrop-filter: blur(4px);
+    
+    text-decoration: none;
+    font-weight: 500;
+    
+    transition: background 0.2s;
+ }
+ 
+ ul li a: hover {
+     background: var(--surface-color-hover);
+     
+     border: 1px solid var(--text-color);
+     
+ }
+ 
+ #social-links {
+     display: flex;
+     justify-content: center;
+     padding: 24px 0;
+     font-size: 24px;
+ }
+ 
+ #social-links a{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     
+     padding: 16px;
+     border-radius: 50%;
+     transition: background 0.2s;
+ }
+ 
+ 
+ 
+ #social-links a: hover {
+     background: var(--highlight-color);
+ }
+ 
+ footer {
+     text-align: center;
+     font-size: 14px;
+     padding: 24px 0;
+ }
