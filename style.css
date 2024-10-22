@@ -42,7 +42,7 @@
  }
 
  #house { 
-   border: 1px solid green;
+   
     margin: 56px auto 0px;
     width: 360px;
     padding: 0 24px;
@@ -55,7 +55,7 @@
  */
  #profile {
      padding: 24px ;
-     border: 1px solid red ;
+     
  }
  
 
@@ -74,13 +74,34 @@
  }
  /*switch button*/
  
+ #switch {
+     position: relative;
+     width: 64px;
+     margin: 4px auto;
+ }
+ 
+ 
  #switch button {
      height: 32px;
      width: 32px;
      background: white var(--switch-bg-url) no-repeat center;
      border: 0;
      border-radius: 50%;
+     
+     position: absolute;
+     z-index: 1;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
  }
+ .light #switch button {
+     right: 0;
+     left: initial;
+ }
+ 
+ 
+ 
+ 
  #switch span{
      display: block;
      width: 64px;
